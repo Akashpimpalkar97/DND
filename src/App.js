@@ -1,23 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
-
+import Item from "./Item";
+import DND from "./dnd";
+import "./app.css";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <h1>Drag here to remove Items</h1>
+      <div className="app__main">
+        <DND id="dnd-1" className="dnd">
+          <h1>Store 1</h1>
+          <Item id="item-1" className="item" draggable>
+            <h1>Item 1</h1>
+          </Item>
+          <Item id="item-1" className="item" draggable>
+            <h1>Item 2</h1>
+          </Item>
+          <Item id="item-1" className="item" draggable>
+            <h1>Item 3</h1>
+          </Item>
+          <Item id="item-1" className="item" draggable>
+            <h1>Item 4</h1>
+          </Item>
+          <Item id="item-1" className="item" draggable>
+            <h1>Item 5</h1>
+          </Item>
+        </DND>
+        <DND id="dnd-2" className="dnd">
+          <h1>Store 2</h1>
+          <Item id="item-2" className="item" draggable>
+            <h1>Item 1</h1>
+          </Item>
+        </DND>
+      </div>
     </div>
   );
 }
